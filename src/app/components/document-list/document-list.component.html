@@ -1,0 +1,8 @@
+<div class='sidenav'>
+    <span (click)='newDoc()'>New Document</span>
+    <span [class.selected]='docId === currentDocId' (click)='loadDoc(docId)' *ngFor='let docId of documents | async'> 
+      {{ docId }}
+    </span>
+</div>
+
+<!-- ha a .ts-ben a documents nem observable hanem subject akkor nem kell az ngFor-ban az async  --> 
